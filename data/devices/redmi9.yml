@@ -1,0 +1,92 @@
+---
+- name:redmi9
+  id: 
+  codenames:
+      - lancelot
+  architecture: 
+  block_devs:
+    base_dirs:
+      - /dev/block/by-name
+    system:
+      - /dev/block/by-name/system
+      - /dev/block/mapper/system
+      - ext4
+    cache:
+      - /dev/block/by-name/cache
+      - /dev/block/mmcblk0p44
+    data:
+      - /dev/block/by-name/userdata
+      - /dev/block/mmcblk0p45
+    boot:
+      - /dev/block/by-name/boot
+      - /dev/block/by-name/boot_para
+      - /dev/block/mmcblk0p20
+      - /dev/block/mmcblk0p33
+      - ext4
+    recovery:
+      - /dev/block/by-name/recovery
+      - /dev/block/mmcblk0p1
+    extra:
+      - /dev/block/by-name/cust
+      - /dev/block/by-name/devinfo
+      - /dev/block/by-name/dtbo
+      - /dev/block/by-name/exaid
+      - /dev/block/by-name/expdb
+      - /dev/block/by-name/ffu
+      - /dev/block/by-name/flashinfo
+      - /dev/block/by-name/frp
+      - /dev/block/by-name/gsort
+      - /dev/block/by-name/gz1
+      - /dev/block/by-name/gz2
+      - /dev/block/by-name/lk
+      - /dev/block/by-name/lk2
+      - /dev/block/by-name/logo
+      - /dev/block/by-name/md1img
+      - /dev/block/by-name/md_udc
+      - /dev/block/by-name/metadata
+      - /dev/block/by-name/minidump
+      - /dev/block/by-name/misc
+      - /dev/block/by-name/mmcblk0
+      - /dev/block/by-name/mmcblk0boot0
+      - /dev/block/by-name/mmcblk0boot1
+      - /dev/block/by-name/mmcblk0rpmb
+      - /dev/block/by-name/nvcfg
+      - /dev/block/by-name/nvdata
+      - /dev/block/by-name/nvram
+      - /dev/block/by-name/otp
+      - /dev/block/by-name/para
+      - /dev/block/by-name/persist
+      - /dev/block/by-name/persistbak
+      - /dev/block/by-name/product
+      - /dev/block/by-name/proinfo
+      - /dev/block/by-name/protect1
+      - /dev/block/by-name/protect2
+      - /dev/block/by-name/scp1
+      - /dev/block/by-name/scp2
+      - /dev/block/by-name/sec1
+      - /dev/block/by-name/seccfg
+      - /dev/block/by-name/spmfw
+      - /dev/block/by-name/sspm_1
+      - /dev/block/by-name/sspm_2
+      - /dev/block/by-name/super
+      - /dev/block/by-name/tee1
+      - /dev/block/by-name/tee2
+      - /dev/block/by-name/vbmeta
+      - /dev/block/by-name/vbmeta_system
+      - /dev/block/by-name/vbmeta_vendor
+      - /dev/block/by-name/vendor
+      - /dev/block/mmcblk1
+      - /dev/block/mmcblk1p1
+ 
+  boot_ui:
+    supported: true
+    flags:
+      - TW_GRAPHICS_FORCE_USE_LINELENGTH
+    brightness_path: /sys/class/leds/lcd-backlight/brightness
+    max_brightness: 255
+    default_brightness: 168
+    cpu_temp_path: /sys/devices/virtual/thermal/thermal_zone0/temp
+    battery_path: /sys/class/power_supply/battery/capacity
+    graphics_backends:
+      - fbdev
+    theme: portrait_hdpi
